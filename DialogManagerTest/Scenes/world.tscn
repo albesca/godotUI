@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy0kdn74hclh3"]
+
+[ext_resource type="PackedScene" uid="uid://cvpa4e72pe26j" path="res://Scenes/box.tscn" id="1_dpgnl"]
+
+[node name="World" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 1.5, 2)
+
+[node name="Box01" parent="." instance=ExtResource("1_dpgnl")]
+box_name = "Bob"
+
+[node name="Box02" parent="." instance=ExtResource("1_dpgnl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
+box_name = "Charlie"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+light_energy = 5.0
